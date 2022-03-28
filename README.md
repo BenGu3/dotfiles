@@ -26,7 +26,7 @@ brew install yadm
 ### Clone and bootstrap
 
 ```bash
-yadm clone https://github.com/pndurette/mac-setup.git --bootstrap # https!
+yadm clone https://github.com/BenGu3/dotfiles.git --bootstrap # https!
 ```
 
 ## Others
