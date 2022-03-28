@@ -61,8 +61,8 @@ function chpwd() {
 #-----------------------------------------
 # aliases - personal
 #-----------------------------------------
-alias learn="cd /Users/bengu3/repos/personal/learnings"
-alias school='cd /Users/bengu3/repos/personal/school'
+alias learn="cd /Users/ben-guthrie/repos/personal/learnings"
+alias school='cd /Users/ben-guthrie/repos/personal/school'
 
 alias ws="webstorm"
 alias dc='docker-compose'
@@ -101,7 +101,7 @@ export PATH="/Users/ben-guthrie/.local/bin:$PATH"
 #-----------------------------------------
 # zscaler
 #-----------------------------------------
-export NODE_EXTRA_CA_CERTS=/Users/bengu3/repos/work/ZscalerRootCertificate-2048-SHA256.crt
+export NODE_EXTRA_CA_CERTS=/Users/ben-guthrie/repos/work/ZscalerRootCertificate-2048-SHA256.crt
 
 #-----------------------------------------
 # fzf
