@@ -18,14 +18,10 @@ plugins=(
 )
 NVM_AUTOLOAD=1
 
-source $ZSH/oh-my-zsh.sh
-
 #-----------------------------------------
 # spaceship prompt
 # from https://github.com/denysdovhan/spaceship-prompt
 #-----------------------------------------
-# autoload -U promptinit; promptinit
-# prompt spaceship
 ZSH_THEME="spaceship" 
 SPACESHIP_KUBECTL_SHOW=false
 SPACESHIP_TIME_12HR=true
@@ -47,6 +43,8 @@ SPACESHIP_PROMPT_ORDER=(
 SPACESHIP_RPROMPT_ORDER=(
   battery
 )
+
+source $ZSH/oh-my-zsh.sh
 
 #-----------------------------------------
 # tab title
