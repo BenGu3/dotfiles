@@ -6,6 +6,7 @@ tap 'homebrew/cask'
 tap 'homebrew/core'
 tap 'homebrew/cask-drivers'
 tap 'homebrew/services'
+tap 'int128/kubelogin'
 
 #-----------------------------------------
 # Brew CLI apps
@@ -23,13 +24,13 @@ brew 'yarn'
 
 # terminal
 brew 'zsh'
-brew 'zfz'
+brew 'fzf'
 
 # containers
 cask 'docker'
 brew 'kubernetes-cli' # kubectl
 brew 'kubectx'
-brew 'kubelogin'
+brew 'int128/kubelogin/kubelogin'
 brew 'helm'
 
 # python
@@ -45,6 +46,7 @@ cask 'notion'
 cask 'pycharm-ce'
 cask 'rectangle'
 cask 'slack'
+cask 'tableplus'
 cask 'visual-studio-code'
 cask 'webstorm'
 cask 'zoom'

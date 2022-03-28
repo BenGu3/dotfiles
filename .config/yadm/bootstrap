@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 SSH_REPO_URL="git@github.com:BenGu3/dotfiles.git"
 
@@ -7,12 +7,12 @@ SSH_REPO_URL="git@github.com:BenGu3/dotfiles.git"
 #-----------------------------------------
 
 if ! command -v brew >/dev/null 2>&1; then
-  echo "Installing homebrew..."
+  echo "➡️ Installing homebrew..."
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 if [ -f "$HOME/.Brewfile" ]; then
-  echo "Installing brew packages..."
+  echo "➡️ Installing brew packages..."
   brew bundle --global
 fi
 
@@ -20,34 +20,46 @@ fi
 # Install oh-my-zsh
 #-----------------------------------------
 
-if [ ! -d $ZSH ]; then
-  echo "Installing oh-my-zsh..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+if [ ! -d "$ZSH" ]; then
+  echo "➡️ Installing oh-my-zsh..."
+  /bin/bash -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
+source ~/.zshrc
+
 #-----------------------------------------
-# Install nvm
+# Install spaceship theme
 #-----------------------------------------
 
-if [ ! -d $HOME/.nvm ]; then
-  echo "Installing nvm..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh)"
+if [ ! -d "$ZSH_CUSTOM/themes/spaceship-prompt" ]; then
+  echo "➡️ Installing spaceship theme..."
+  git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+  ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 fi
 
 #-----------------------------------------
 # Install fzf-tab
 #-----------------------------------------
 
-if [ ! -d $HOME/.oh-my-zsh/custom/plugins/fzf-tab ]; then
-  echo "Installing fzf-tab plugin..."
-  git clone https://github.com/Aloxaf/fzf-tab HOME/.oh-my-zsh/custom/plugins/fzf-tab
+if [ ! -d "$HOME/.oh-my-zsh/custom/plugins/fzf-tab" ]; then
+  echo "➡️ Installing fzf-tab plugin..."
+  git clone https://github.com/Aloxaf/fzf-tab "$HOME/.oh-my-zsh/custom/plugins/fzf-tab"
+fi
+
+#-----------------------------------------
+# Install nvm
+#-----------------------------------------
+
+if [ ! -d "$HOME/.nvm" ]; then
+  echo "➡️ Installing nvm..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh)"
 fi
 
 #-----------------------------------------
 # * Set yadm origin url to ssh
 #-----------------------------------------
 
-echo "Updating the yadm origin to ssh repo url..."
+echo "➡️ Updating the yadm origin to ssh repo url..."
 yadm remote set-url origin "$SSH_REPO_URL"
 
-echo "🎉 Done 🎉"
+echo "🎉 Done (you may need to run \`source ~/.zshrc\` to get changes) 🎉"
