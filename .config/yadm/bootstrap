@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+SSH_REPO_URL="git@github.com:BenGu3/dotfiles.git"
+
+#-----------------------------------------
+# Install Homebrew/packages
+#-----------------------------------------
+
+if ! command -v brew >/dev/null 2>&1; then
+  echo "Installing homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+if [ -f "$HOME/.Brewfile" ]; then
+  echo "Installing brew packages..."
+  brew bundle --global
+fi
+
+#-----------------------------------------
+# Install oh-my-zsh
+#-----------------------------------------
+
+if [ ! -d $ZSH ]; then
+  echo "Installing oh-my-zsh..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+
+#-----------------------------------------
+# Install nvm
+#-----------------------------------------
+
+if [ ! -d $HOME/.nvm ]; then
+  echo "Installing nvm..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh)"
+fi
+
+#-----------------------------------------
+# Install fzf-tab
+#-----------------------------------------
+
+if [ ! -d $HOME/.oh-my-zsh/custom/plugins/fzf-tab ]; then
+  echo "Installing fzf-tab plugin..."
+  git clone https://github.com/Aloxaf/fzf-tab HOME/.oh-my-zsh/custom/plugins/fzf-tab
+fi
+
+#-----------------------------------------
+# * Set yadm origin url to ssh
+#-----------------------------------------
+
+echo "Updating the yadm origin to ssh repo url..."
+yadm remote set-url origin "$SSH_REPO_URL"
+
+echo "🎉 Done 🎉"
