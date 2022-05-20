@@ -16,3 +16,5 @@
 	path = ~/.config/git/personal_config
 [includeIf "gitdir:~/"]
 	path = ~/.config/git/personal_config
+[init]
+	defaultBranch = main

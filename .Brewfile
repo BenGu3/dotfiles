@@ -34,7 +34,9 @@ brew 'int128/kubelogin/kubelogin'
 brew 'helm'
 
 # python
+brew 'poetry'
 brew 'pyenv'
+brew 'pyenv-virtualenv'
 
 #-----------------------------------------
 # App casks
@@ -43,6 +45,7 @@ cask '1password'
 cask 'google-chrome'
 cask 'iterm2'
 cask 'notion'
+cask 'postman'
 cask 'pycharm-ce'
 cask 'rectangle'
 cask 'slack'
