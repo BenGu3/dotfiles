@@ -65,6 +65,15 @@ if [ ! -d "$HOME/.nvm" ]; then
 fi
 
 #-----------------------------------------
+# Run macos bootstrap
+#-----------------------------------------
+
+if [ ! -d "$HOME/.config/macos/bootstrap.sh" ]; then
+  echo "➡️ Setting up macos settings..."
+  /bin/bash -c "$HOME/.config/macos/bootstrap.sh"
+fi
+
+#-----------------------------------------
 # * Set yadm origin url to ssh
 #-----------------------------------------
 
