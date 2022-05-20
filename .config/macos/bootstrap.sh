@@ -220,6 +220,14 @@ defaults write com.apple.commerce AutoUpdate -bool true
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 ###############################################################################
+# Startup                                                                #
+###############################################################################
+
+# Add apps to login items
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/Rectangle.app", hidden:false}'
+osascript -e 'tell application "System Events" to make login item at end with properties {path:"/Applications/1Password 7.app", hidden:false}'
+
+###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
 

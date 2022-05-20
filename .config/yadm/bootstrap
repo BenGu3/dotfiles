@@ -68,9 +68,21 @@ fi
 # Run macos bootstrap
 #-----------------------------------------
 
-if [ ! -d "$HOME/.config/macos/bootstrap.sh" ]; then
+if [ -e "$HOME/.config/macos/bootstrap.sh" ]; then
   echo "➡️ Setting up macos settings..."
   /bin/bash -c "$HOME/.config/macos/bootstrap.sh"
+fi
+
+#-----------------------------------------
+# Start background apps
+#-----------------------------------------
+
+if [ -e "/Applications/1Password 7.app" ]; then
+    open -a 1Password\ 7
+fi
+
+if [ -e "/Applications/Rectangle.app" ]; then
+    open -a Rectangle
 fi
 
 #-----------------------------------------
