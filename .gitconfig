@@ -1,14 +1,14 @@
 [user]
-    name = Ben Guthrie
+	name = Ben Guthrie
 [pull]
-    rebase = true
+	rebase = true
 [rebase]
-    autoStash = true
+	autoStash = true
 [filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 
 [includeIf "gitdir:~/repos/work/"]
 	path = ~/.config/git/work_config
