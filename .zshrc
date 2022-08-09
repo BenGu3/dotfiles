@@ -62,7 +62,8 @@ function chpwd() {
 # aliases - personal
 #-----------------------------------------
 alias learn="cd /Users/ben-guthrie/repos/personal/learnings"
-alias school='cd /Users/ben-guthrie/repos/personal/school'
+alias school='cd /Users/ben-guthrie/repos/school'
+alias personal='cd /Users/ben-guthrie/repos/personal'
 
 alias ws="webstorm"
 alias dc='docker-compose'
