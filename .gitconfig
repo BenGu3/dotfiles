@@ -1,5 +1,6 @@
 [user]
 	name = Ben Guthrie
+	email = benjee.012@gmail.com
 [pull]
 	rebase = true
 [rebase]
@@ -13,8 +14,6 @@
 [includeIf "gitdir:~/repos/work/"]
 	path = ~/.config/git/work_config
 [includeIf "gitdir:~/repos/personal/"]
-	path = ~/.config/git/personal_config
-[includeIf "gitdir:~/"]
 	path = ~/.config/git/personal_config
 [init]
 	defaultBranch = main
