@@ -35,3 +35,19 @@ yadm clone https://github.com/BenGu3/dotfiles.git --bootstrap
 
 - [Create ssh key and add it to GitHub](https://help.github.com/articles/connecting-to-github-with-ssh/)
 - [Add key to ssh-agent and `~/.ssh/config`](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#adding-your-ssh-key-to-the-ssh-agent)
+
+### TODO
+- MacOS
+    - Set chrome to default browser
+    - Let watch open computer
+    - Show volume on menu bar
+    - No message sounds
+- Chrome 
+    - no “hold to quit”
+- Iterm2
+    - open new tab at same folder
+    - set font to Fira Mono for Powerline
+- Zoom
+    - Mute/Stop vid on join
+    - Always show names/controls
+    - Maintain window size
