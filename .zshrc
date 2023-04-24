@@ -1,7 +1,7 @@
 #-----------------------------------------
 # oh-my-zsh
 #-----------------------------------------
-export ZSH="/Users/ben-guthrie/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 plugins=(
   git
@@ -60,9 +60,9 @@ function chpwd() {
 #-----------------------------------------
 # aliases - personal
 #-----------------------------------------
-alias learn="cd /Users/ben-guthrie/repos/personal/learnings"
-alias school='cd /Users/ben-guthrie/repos/school'
-alias personal='cd /Users/ben-guthrie/repos/personal'
+alias learn="cd ~/repos/personal/learnings"
+alias school='cd ~/repos/school'
+alias personal='cd ~/repos/personal'
 
 alias ws="webstorm"
 alias dc='docker-compose'
