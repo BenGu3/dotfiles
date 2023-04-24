@@ -51,3 +51,6 @@ yadm clone https://github.com/BenGu3/dotfiles.git --bootstrap
     - Mute/Stop vid on join
     - Always show names/controls
     - Maintain window size
+- Bootstrap
+    - Only have to enter mac password once
+    - Respond no to running zsh immediately
