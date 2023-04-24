@@ -12,7 +12,6 @@ plugins=(
   nvm
   kubectl
   helm
-  poetry
   fzf
   fzf-tab
 )
@@ -74,9 +73,6 @@ alias dcd='docker-compose down'
 # aliases - work
 #-----------------------------------------
 alias dev='cd ~/repos/work'
-alias chan='cd ~/repos/work/channels'
-alias iq='cd ~/repos/work/roleiq-leader'
-alias curation='cd ~/repos/work/curation'
 
 #-----------------------------------------
 # nvm
@@ -84,25 +80,6 @@ alias curation='cd ~/repos/work/curation'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-#-----------------------------------------
-# pyenv
-#-----------------------------------------
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-#-----------------------------------------
-# poetry
-#-----------------------------------------
-export PATH="/Users/ben-guthrie/.local/bin:$PATH"
-
-#-----------------------------------------
-# zscaler
-#-----------------------------------------
-export NODE_EXTRA_CA_CERTS=/Users/ben-guthrie/repos/work/ZscalerRootCertificate-2048-SHA256.crt
 
 #-----------------------------------------
 # fzf
