@@ -54,3 +54,4 @@ yadm clone https://github.com/BenGu3/dotfiles.git --bootstrap
 - Bootstrap
     - Only have to enter mac password once
     - Respond no to running zsh immediately
+    - create directories for repos (`repos/work` and `repos/personal`) 
