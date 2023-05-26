@@ -14,8 +14,10 @@ plugins=(
   helm
   fzf
   fzf-tab
+  golang
 )
-NVM_AUTOLOAD=1
+
+zstyle ':omz:plugins:nvm' autoload true
 
 #-----------------------------------------
 # spaceship prompt
@@ -32,7 +34,6 @@ SPACESHIP_PROMPT_ORDER=(
   git           # Git section (git_branch + git_status)
   package       # Package version
   node          # Node.js section
-  pyenv         # Pyenv section
   kubectl       # Kubectl context section
   line_sep      # Line break
   jobs          # Background jobs indicator
@@ -87,3 +88,14 @@ export NVM_DIR="$HOME/.nvm"
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 enable-fzf-tab
+
+#-----------------------------------------
+# fzf
+#-----------------------------------------
+zstyle ':completion:*:*:make:*' tag-order 'targets'
+autoload -U compinit && compinit
+
+#-----------------------------------------
+# JetBrains Command Line Launchers
+#-----------------------------------------
+export PATH=$HOME/.jetbrains:$PATH

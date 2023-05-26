@@ -17,6 +17,20 @@ if [ -f "$HOME/.Brewfile" ]; then
 fi
 
 #-----------------------------------------
+# Create common directores
+#-----------------------------------------
+
+if [ ! -d "$HOME/repos/work" ]; then
+  echo "➡️ Creating work repos directory..."
+  mkdir -p $HOME/repos/work
+fi
+
+if [ ! -d "$HOME/repos/personal" ]; then
+  echo "➡️ Creating personal repos directory..."
+  mkdir -p $HOME/repos/personal
+fi
+
+#-----------------------------------------
 # Install oh-my-zsh
 #-----------------------------------------
 

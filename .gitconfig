@@ -20,3 +20,5 @@
 [alias]
 	share = !npx git-share share
 	take = !npx git-share take
+[url "git@github.com:"]
+	insteadOf = https://github.com/
