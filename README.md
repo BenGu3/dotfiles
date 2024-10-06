@@ -1,8 +1,8 @@
 # dotfile setup
 
-## Pre-setup
+## Setup
 
-### Install `homebrew`
+### 1. Install `homebrew`
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -11,19 +11,17 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
-### Install `yadm`
+### 2. Install `yadm`
 
 ```bash
 brew install yadm
 ```
 
-### Log into the Mac App Store
+### 3. Log into the Mac App Store
 
 (for `mas`) via `App Store > Preferences > Sign in`
 
-## Setup
-
-### Clone and bootstrap
+### 4. Clone and bootstrap
 
 ```bash
 yadm clone https://github.com/BenGu3/dotfiles.git --bootstrap
@@ -32,21 +30,14 @@ yadm clone https://github.com/BenGu3/dotfiles.git --bootstrap
 ## Others
 
 ### Add ssh key
+- [1Password ssh setup](https://developer.1password.com/docs/ssh/get-started/)
 
-- [Create ssh key and add it to GitHub](https://help.github.com/articles/connecting-to-github-with-ssh/)
-- [Add key to ssh-agent and `~/.ssh/config`](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#adding-your-ssh-key-to-the-ssh-agent)
-
-### TODO
+### TODO (manual setup)
 - MacOS
-    - Set chrome to default browser
-    - Let watch open computer
+    - Set Arc to default browser
+    - Allow watch open computer
     - Show volume on menu bar
     - No message sounds
-- Chrome 
-    - no “hold to quit”
-- Iterm2
-    - open new tab at same folder
-    - set font to Fira Mono for Powerline
 - Zoom
     - Mute/Stop vid on join
     - Always show names/controls
@@ -54,4 +45,3 @@ yadm clone https://github.com/BenGu3/dotfiles.git --bootstrap
 - Bootstrap
     - Only have to enter mac password once
     - Respond no to running zsh immediately
-    - create directories for repos (`repos/work` and `repos/personal`) 
