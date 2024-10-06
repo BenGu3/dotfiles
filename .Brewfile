@@ -44,6 +44,7 @@ cask 'docker'
 # App casks
 #-----------------------------------------
 cask '1password'
+cask 'alacritty'
 cask 'arc'
 # cask 'google-chrome'
 # cask 'iterm2'

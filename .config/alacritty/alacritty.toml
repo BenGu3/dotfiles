@@ -1,0 +1,12 @@
+import = ["~/.config/alacritty/cyberdream.toml"]
+
+[window]
+option_as_alt = "Both"
+opacity = 0.95
+startup_mode = "Maximized"
+
+[font]
+size = 14
+normal = { family = "Monaspace Neon", style = "Regular" }
+bold = { family = "Monaspace Neon", style = "Bold" }
+italic = { family = "Monaspace Neon", style = "Italic" }

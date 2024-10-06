@@ -1,0 +1,16 @@
+keybinds {
+    normal {
+        unbind "Ctrl o"
+        bind "Ctrl x" { SwitchToMode "Session"; }
+    }
+    session {
+        unbind "Ctrl o"
+        bind "Ctrl x" { SwitchToMode "Normal"; }
+    }
+}
+
+pane_frames false
+
+theme "cyberdream"
+
+theme_dir "/Users/ben.guthrie/.config/zellij/themes"
