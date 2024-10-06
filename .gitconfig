@@ -20,5 +20,12 @@
 [alias]
 	share = !npx git-share share
 	take = !npx git-share take
+	yolo = !git commit --no-verify
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true

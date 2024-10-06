@@ -6,7 +6,7 @@ tap 'homebrew/cask'
 tap 'homebrew/core'
 tap 'homebrew/cask-drivers'
 tap 'homebrew/services'
-tap 'int128/kubelogin'
+# tap 'int128/kubelogin'
 
 #-----------------------------------------
 # Brew CLI apps
@@ -20,18 +20,20 @@ brew 'wget'
 #-----------------------------------------
 # general
 brew 'git'
-brew 'yarn'
+# brew 'yarn'
 
 # terminal
 brew 'zsh'
 brew 'fzf'
+brew 'neovim'
+brew 'zellij'
 
 # containers
 cask 'docker'
-brew 'kubernetes-cli' # kubectl
-brew 'kubectx'
-brew 'int128/kubelogin/kubelogin'
-brew 'helm'
+# brew 'kubernetes-cli' # kubectl
+# brew 'kubectx'
+# brew 'int128/kubelogin/kubelogin'
+# brew 'helm'
 
 # python
 # brew 'poetry'
@@ -42,18 +44,21 @@ brew 'helm'
 # App casks
 #-----------------------------------------
 cask '1password'
-cask 'google-chrome'
-cask 'iterm2'
+cask 'arc'
+# cask 'google-chrome'
+# cask 'iterm2'
 cask 'notion'
+cask 'notion-calendar'
 cask 'postman'
 # cask 'pycharm-ce'
 cask 'rectangle'
 cask 'slack'
 cask 'tableplus'
 cask 'visual-studio-code'
-cask 'webstorm'
+# cask 'webstorm'
 cask 'zoom'
 
+cask 'font-monaspace'
 #-----------------------------------------
 # Mac App Store apps
 #-----------------------------------------

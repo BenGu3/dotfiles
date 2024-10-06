@@ -24,9 +24,8 @@ zstyle ':omz:plugins:nvm' autoload true
 # from https://github.com/denysdovhan/spaceship-prompt
 #-----------------------------------------
 ZSH_THEME="spaceship" 
-SPACESHIP_KUBECTL_SHOW=false
+# SPACESHIP_KUBECTL_SHOW=true
 SPACESHIP_TIME_12HR=true
-SPACESHIP_BATTERY_THRESHOLD=101
 SPACESHIP_PROMPT_ORDER=(
   user          # Username section
   dir           # Current directory section
@@ -34,14 +33,11 @@ SPACESHIP_PROMPT_ORDER=(
   git           # Git section (git_branch + git_status)
   package       # Package version
   node          # Node.js section
-  kubectl       # Kubectl context section
+  # kubectl       # Kubectl context section
   line_sep      # Line break
   jobs          # Background jobs indicator
   exit_code     # Exit code section
   char          # Prompt character
-)
-SPACESHIP_RPROMPT_ORDER=(
-  battery
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -59,16 +55,19 @@ function chpwd() {
 }
 
 #-----------------------------------------
+# aliases
+#-----------------------------------------
+alias e="nvim"
+alias dc='docker-compose'
+alias dcu='docker-compose up -d'
+alias dcd='docker-compose down'
+
+#-----------------------------------------
 # aliases - personal
 #-----------------------------------------
 alias learn="cd ~/repos/personal/learnings"
 alias school='cd ~/repos/school'
 alias personal='cd ~/repos/personal'
-
-alias ws="webstorm"
-alias dc='docker-compose'
-alias dcu='docker-compose up -d'
-alias dcd='docker-compose down'
 
 #-----------------------------------------
 # aliases - work
@@ -96,6 +95,17 @@ zstyle ':completion:*:*:make:*' tag-order 'targets'
 autoload -U compinit && compinit
 
 #-----------------------------------------
-# JetBrains Command Line Launchers
+# nvim/zellij
 #-----------------------------------------
-export PATH=$HOME/.jetbrains:$PATH
+if [[ "$TERM" == "alacritty" && -z "$ZELLIJ" ]]; then
+    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+        zellij attach -c
+    else
+        zellij -l welcome
+    fi
+
+    if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+        exit
+    fi
+fi
+
