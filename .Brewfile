@@ -2,9 +2,6 @@
 # Taps
 #-----------------------------------------
 tap 'homebrew/bundle'
-tap 'homebrew/cask'
-tap 'homebrew/core'
-tap 'homebrew/cask-drivers'
 tap 'homebrew/services'
 # tap 'int128/kubelogin'
 
