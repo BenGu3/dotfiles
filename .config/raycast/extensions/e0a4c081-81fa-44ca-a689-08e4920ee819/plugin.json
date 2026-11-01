@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "git-repos",
+  "description": "Quickly access your local git repositories and open them in your favorite editor or any app",
+  "author": {
+    "name": "moored"
+  },
+  "license": "MIT"
+}

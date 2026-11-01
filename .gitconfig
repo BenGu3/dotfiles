@@ -1,6 +1,7 @@
 [user]
 	name = Ben Guthrie
 	email = benjee.012@gmail.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMJ8SJHqr8IUcvbmoUPgdnEE/Dg4wlNaiACXz5wR1wwh
 [pull]
 	rebase = true
 [rebase]
@@ -18,8 +19,6 @@
 [init]
 	defaultBranch = main
 [alias]
-	share = !npx git-share share
-	take = !npx git-share take
 	yolo = !git commit --no-verify
 [url "git@github.com:"]
 	insteadOf = https://github.com/

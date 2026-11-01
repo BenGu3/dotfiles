@@ -15,6 +15,7 @@ plugins=(
   fzf
   fzf-tab
   golang
+  pnpm
 )
 
 zstyle ':omz:plugins:nvm' autoload true
@@ -58,21 +59,28 @@ function chpwd() {
 # aliases
 #-----------------------------------------
 alias e="nvim"
+alias ez="cd ~ && e .zshrc"
+alias ec="cd ~/.config && e ."
 alias dc='docker-compose'
 alias dcu='docker-compose up -d'
 alias dcd='docker-compose down'
+alias lg='lazygit'
+alias o="opencode"
 
 #-----------------------------------------
 # aliases - personal
 #-----------------------------------------
-alias learn="cd ~/repos/personal/learnings"
-alias school='cd ~/repos/school'
 alias personal='cd ~/repos/personal'
 
 #-----------------------------------------
 # aliases - work
 #-----------------------------------------
 alias dev='cd ~/repos/work'
+
+#-----------------------------------------
+# brew
+#-----------------------------------------
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 #-----------------------------------------
 # nvm
@@ -87,25 +95,47 @@ export NVM_DIR="$HOME/.nvm"
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 enable-fzf-tab
-
-#-----------------------------------------
-# fzf
-#-----------------------------------------
 zstyle ':completion:*:*:make:*' tag-order 'targets'
 autoload -U compinit && compinit
 
 #-----------------------------------------
-# nvim/zellij
+# nvim
 #-----------------------------------------
-if [[ "$TERM" == "alacritty" && -z "$ZELLIJ" ]]; then
-    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-        zellij attach -c
-    else
-        zellij -l welcome
-    fi
+export EDITOR=nvim
 
-    if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
-        exit
-    fi
-fi
+# ----------------------------------------
+# k9s
+# ----------------------------------------
+export K9S_CONFIG_DIR="$HOME/.config/k9s"
+
+
+# ----------------------------------------
+# pnpm
+# ----------------------------------------
+export PNPM_HOME="/Users/benguthrie/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+## ----------------------------------------
+## bun completions
+# ----------------------------------------
+[ -s "/Users/benguthrie/.bun/_bun" ] && source "/Users/benguthrie/.bun/_bun"
+
+# ----------------------------------------
+# bun
+# ----------------------------------------
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# ----------------------------------------
+# go
+# ----------------------------------------
+export PATH=$PATH:$(go env GOPATH)/bin
+
+# ----------------------------------------
+# lazy git config
+# ----------------------------------------
+export XDG_CONFIG_HOME="$HOME/.config"
 

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "imessage-2fa",
+  "description": "View 2FA codes from iMessage and Email",
+  "author": {
+    "name": "yuercl"
+  },
+  "license": "MIT"
+}

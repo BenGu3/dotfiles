@@ -3,7 +3,7 @@
 #-----------------------------------------
 tap 'homebrew/bundle'
 tap 'homebrew/services'
-# tap 'int128/kubelogin'
+tap 'anomalyco/tap'
 
 #-----------------------------------------
 # Brew CLI apps
@@ -17,48 +17,38 @@ brew 'wget'
 #-----------------------------------------
 # general
 brew 'git'
-# brew 'yarn'
+brew 'gh'
 
 # terminal
 brew 'zsh'
 brew 'fzf'
 brew 'neovim'
-brew 'zellij'
+
+# ai
+brew 'opencode-v2'
 
 # containers
 cask 'docker'
-# brew 'kubernetes-cli' # kubectl
-# brew 'kubectx'
-# brew 'int128/kubelogin/kubelogin'
-# brew 'helm'
-
-# python
-# brew 'poetry'
-# brew 'pyenv'
-# brew 'pyenv-virtualenv'
 
 #-----------------------------------------
 # App casks
 #-----------------------------------------
 cask '1password'
-cask 'alacritty'
+cask '1password-cli'
 cask 'arc'
-# cask 'google-chrome'
-# cask 'iterm2'
+cask 'cursor'
 cask 'karabiner-elements'
-cask 'notion'
 cask 'notion-calendar'
-cask 'postman'
-# cask 'pycharm-ce'
+cask 'opencode-desktop'
 cask 'raycast'
 cask 'rectangle'
+cask 'setapp'
 cask 'slack'
 cask 'tableplus'
-cask 'visual-studio-code'
-# cask 'webstorm'
 cask 'zoom'
 
 cask 'font-monaspace'
 #-----------------------------------------
 # Mac App Store apps
 #-----------------------------------------
+
