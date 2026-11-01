@@ -18,6 +18,7 @@ brew 'wget'
 # general
 brew 'git'
 brew 'gh'
+brew 'mole'
 
 # terminal
 brew 'zsh'

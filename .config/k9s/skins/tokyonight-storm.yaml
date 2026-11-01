@@ -1,0 +1,153 @@
+# Tokyo Night Storm K9s Skin
+# Based on folke/tokyonight.nvim Storm variant color scheme
+# Place this file in $XDG_CONFIG_HOME/k9s/skins/tokyonight-storm.yaml
+
+# Tokyo Night Storm Color Palette
+# Background colors - Storm variant uses lighter backgrounds
+bg_dark: &bg_dark "#24283b"        # Storm background (lighter than night)
+bg_float: &bg_float "#1f2335"      # Floating windows
+bg_sidebar: &bg_sidebar "#1f2335"  # Sidebar background
+bg_popup: &bg_popup "#1f2335"      # Popup background
+bg_statusline: &bg_statusline "#1d202f"  # Status line background
+
+# Foreground colors
+fg: &fg "#a9b1d6"                  # Main foreground
+fg_dark: &fg_dark "#a9b1d6"        # Dark foreground
+fg_gutter: &fg_gutter "#3b4261"    # Gutter foreground
+comment: &comment "#565f89"        # Comments
+dark3: &dark3 "#545c7e"            # Darker comment variant
+
+# Accent colors - Storm specific
+blue: &blue "#7aa2f7"              # Primary blue
+blue0: &blue0 "#3d59a1"            # Darker blue
+blue1: &blue1 "#2ac3de"            # Light blue/cyan
+blue2: &blue2 "#0db9d7"            # Darker cyan
+blue5: &blue5 "#89ddff"            # Light cyan
+blue6: &blue6 "#b4f9f8"            # Very light cyan
+blue7: &blue7 "#394b70"            # Dark blue
+
+cyan: &cyan "#7dcfff"              # Cyan
+green: &green "#9ece6a"            # Green
+green1: &green1 "#73daca"          # Light green
+green2: &green2 "#41a6b5"          # Teal green
+magenta: &magenta "#bb9af7"        # Magenta/Purple
+magenta2: &magenta2 "#ff007c"      # Bright magenta
+orange: &orange "#ff9e64"          # Orange
+purple: &purple "#9d7cd8"          # Purple
+red: &red "#f7768e"                # Red
+red1: &red1 "#db4b4b"              # Dark red
+teal: &teal "#1abc9c"              # Teal
+yellow: &yellow "#e0af68"          # Yellow
+
+# Status colors
+error: &error "#f7768e"            # Error red
+warning: &warning "#e0af68"        # Warning yellow
+info: &info "#7dcfff"              # Info cyan
+success: &success "#9ece6a"        # Success green
+hint: &hint "#1abc9c"              # Hint teal
+
+# Special colors
+border: &border "#3b4261"          # Border color
+selection: &selection "#2e3c64"    # Selection background (storm variant)
+cursor: &cursor "#c0caf5"          # Cursor color
+terminal_black: &terminal_black "#414868"  # Terminal black
+
+k9s:
+  # General body styles
+  body:
+    fgColor: *fg
+    bgColor: default
+    logoColor: *blue
+
+  # Cluster info view
+  info:
+    fgColor: *blue1
+    sectionColor: *blue
+
+  # Frame styles for borders
+  frame:
+    # Border styles
+    border:
+      fgColor: *border
+      focusColor: *blue
+    # Menu styles
+    menu:
+      fgColor: *fg
+      keyColor: *magenta
+      numKeyColor: *blue1
+    # Crumb navigation
+    crumbs:
+      fgColor: *bg_dark
+      bgColor: default
+      activeColor: *blue
+    # Status indicators
+    status:
+      newColor: *success
+      modifyColor: *warning
+      addColor: *info
+      errorColor: *error
+      highlightColor: *blue
+      killColor: *red
+      completedColor: *comment
+    # Title styles
+    title:
+      fgColor: *blue
+      bgColor: default
+      highlightColor: *cyan
+      counterColor: *magenta
+      filterColor: *dark3
+
+  # Dialog styles
+  dialog:
+    fgColor: *fg
+    bgColor: default
+    buttonFgColor: *bg_dark
+    buttonBgColor: *blue
+    buttonFocusFgColor: *bg_dark
+    buttonFocusBgColor: *blue1
+    labelFgColor: *yellow
+    fieldFgColor: *fg
+
+  # View-specific styles
+  views:
+    # Table view
+    table:
+      fgColor: *fg
+      bgColor: default
+      cursorColor: *cursor
+      # Table header
+      header:
+        fgColor: *blue
+        bgColor: default
+        sorterColor: *magenta
+      # Marks/selections
+      markColor: *selection
+
+    # YAML view
+    yaml:
+      keyColor: *blue
+      colonColor: *comment
+      valueColor: *fg
+
+    # Logs view
+    logs:
+      fgColor: *fg
+      bgColor: default
+      indicator:
+        fgColor: *blue1
+        bgColor: default
+
+  # Help view
+  help:
+    fgColor: *fg
+    bgColor: default
+    keyColor: *magenta
+    numKeyColor: *blue1
+    sectionColor: *blue
+
+  # Prompt styles
+  prompt:
+    fgColor: *fg
+    bgColor: default
+    suggestColor: *comment
+
