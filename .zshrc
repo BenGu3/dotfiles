@@ -61,21 +61,18 @@ function chpwd() {
 alias e="nvim"
 alias ez="cd ~ && e .zshrc"
 alias ec="cd ~/.config && e ."
+alias sz="source ~/.zshrc"
+
 alias dc='docker-compose'
 alias dcu='docker-compose up -d'
 alias dcd='docker-compose down'
+alias n='npm'
+alias nr='npm run'
 alias lg='lazygit'
 alias o="opencode"
 
-#-----------------------------------------
-# aliases - personal
-#-----------------------------------------
+alias work='cd ~/repos/work'
 alias personal='cd ~/repos/personal'
-
-#-----------------------------------------
-# aliases - work
-#-----------------------------------------
-alias dev='cd ~/repos/work'
 
 #-----------------------------------------
 # brew
