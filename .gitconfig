@@ -20,6 +20,7 @@
 	defaultBranch = main
 [alias]
 	yolo = !git commit --no-verify
+	modify = !git push --force-with-lease
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [gpg]
