@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "tableplus",
+  "description": "Search and open your TablePlus database connections, from a list or the Mac menu bar, including Setapp installs.",
+  "author": {
+    "name": "pernielsentikaer"
+  },
+  "license": "MIT",
+  "version": "1.2.3"
+}

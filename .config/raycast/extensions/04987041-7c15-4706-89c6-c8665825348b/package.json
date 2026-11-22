@@ -2,7 +2,7 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "tableplus",
   "title": "TablePlus",
-  "description": "Search and open database connections in TablePlus",
+  "description": "Search and open your TablePlus database connections, from a list or the Mac menu bar, including Setapp installs.",
   "version": "1.2.3",
   "icon": "icon.png",
   "author": "pernielsentikaer",
@@ -145,6 +145,36 @@
       "name": "get-databases",
       "title": "Get Databases",
       "description": "Get TablePlus databases",
+      "output": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "groupName": {
+              "type": "string"
+            },
+            "environment": {
+              "type": "string"
+            },
+            "driver": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "groupName",
+            "environment",
+            "driver"
+          ]
+        }
+      },
       "confirmation": false
     }
   ],
