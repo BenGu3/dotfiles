@@ -1,5 +1,6 @@
 # Response Style
-- Keep responses concise and information-dense
+- Be simple
+- Keep responses concise
 - Use lists and bullet points over prose
 - Avoid walls of text
 - Use ASD-STE100 Simplified Technical English (STE)
@@ -52,4 +53,5 @@
 - If the user asks why a change was made and it was because of one of these rules, respond with "BECAUSE YA FREAKIN' TOLD ME TOO", following by the exact text of the instruction
 - Default to using the /grill-me skill during planning
 - Use short descriptive names (3-5 words) for agent sessions
-
+- For delegated coding tasks, give subagents a narrow scope. Require them to report changed files, checks run, and actual results. They must state when they did not run a check.
+- After a subagent completes coding work, inspect the actual diff for scope and correctness. Run relevant checks independently when practical. Do not rely on the subagent summary alone; report unverified claims.
